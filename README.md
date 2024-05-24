@@ -23,12 +23,12 @@ To compile and run this project, you will need:
 ### Compilation
 To compile the game, navigate to the project directory and run the following command:
 
-```
+```bash
 gcc -o chess main.c chess.c -lm
 ```
 ### Running the Game
 After compilation, you can start the game by executing the following command:
-```
+```bash
 ./chess
 ```
 ## How to Play
