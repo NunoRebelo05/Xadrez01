@@ -18,15 +18,22 @@ for(int i = 0; i < 8; i++){
 Tabuleiro->scoreJog1 = 0;
 Tabuleiro->scoreJog2 = 0;
 
+
+
 }
 
 void printGame(Tab Tabuleiro){
 
+    printf("\n---------------------------------\n");
+
     for(int i = 0; i < 8; i++){
         for(int j= 0; j < 8; j++){
-            printf("|%c", Tabuleiro->Mapa[i][j]->PecaFig);
+            if(j == 7)
+                 printf("| %c |", Tabuleiro->Mapa[i][j]->PecaFig);
+        
+            else printf("| %c ", Tabuleiro->Mapa[i][j]->PecaFig);
         }
-        printf("\n----------------\n");        
+        printf("\n---------------------------------\n");        
 
     }
 
@@ -35,8 +42,11 @@ void printGame(Tab Tabuleiro){
 
 int main(){
 
-    Tab Tabuleiro;
-    Peca Vazio;
+    struct Pecas Void;
+    Peca Vazio = &Void;
+    struct Tabuleiro Playset;
+    Tab Tabuleiro = &Playset;
+    
     basicsettings(Vazio,Tabuleiro);
     printGame(Tabuleiro);
     return 0;
